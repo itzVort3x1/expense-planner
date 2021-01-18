@@ -12,6 +12,21 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Expense Planner',
+      theme: ThemeData(
+        primarySwatch: Colors.lightGreen,
+        accentColor: Colors.cyan,
+        fontFamily: 'Sans',
+        appBarTheme: AppBarTheme(
+          textTheme: ThemeData.light().textTheme.copyWith(
+            title: TextStyle(
+              fontFamily: 'Sans',
+              fontSize: 20,
+              color: Colors.black87,
+              fontWeight: FontWeight.bold
+            ),
+          )
+        )
+      ),
       home: MyHomePage(),
     );
   }
@@ -26,10 +41,10 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
 
   final List<Transaction> _userTransactions = [
-    Transaction(
-        id: 't1', title: 'New Shoes', amount: 2045, date: DateTime.now()),
-    Transaction(
-        id: 't2', title: 'Weekly Grocories', amount: 400, date: DateTime.now()),
+    // Transaction(
+    //     id: 't1', title: 'New Shoes', amount: 2045, date: DateTime.now()),
+    // Transaction(
+    //     id: 't2', title: 'Weekly Grocories', amount: 400, date: DateTime.now()),
   ];
 
   void _addNewTransaction(String txTitle, double txAmount){
@@ -60,9 +75,9 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(
           'Expense Planner',
         ),
-        actions: [
-          IconButton(icon: Icon(Icons.add), onPressed:() =>  _startAddNewTransaction(context))
-        ],
+        // actions: [
+        //   IconButton(icon: Icon(Icons.add), onPressed:() =>  _startAddNewTransaction(context))
+        // ],
       ),
       body: SingleChildScrollView(
         child: Column(
