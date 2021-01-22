@@ -1,4 +1,4 @@
-![GitHub](https://img.shields.io/github/license/itzVort3x1/expense-planner?style=plastic)
+![GitHub](https://img.shields.io/github/license/itzVort3x1/expense-planner?style=plastic) ![Lines of code](https://img.shields.io/tokei/lines/github/itzVort3x1/expense-planner?style=plastic)
 
 # expense_planner
 
